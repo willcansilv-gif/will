@@ -7,7 +7,6 @@ services:
       POSTGRES_DB: ${DB_NAME:-vitahub}
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     ports:
       - "5432:5432"
 
